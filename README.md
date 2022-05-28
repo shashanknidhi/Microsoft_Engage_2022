@@ -29,7 +29,10 @@ For frontend design part of the webapp, HTML5,CSS3 and JS are used.
     git clone https://github.com/shashanknidhi/Microsoft_Engage_2022.git
     ```
 2. Set up  Python Virtual Environment:
-   - Go to root directory of the project where repo is cloned
+   - Go to root directory of the project.
+   ```
+   cd Microsoft_Engage_2022
+   ```
    - Enter the command to create a virtual environment:
     ```
     python -m venv project
