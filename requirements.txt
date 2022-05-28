@@ -1,6 +1,5 @@
 django
 imutils
-cmake
 opencv-python
 dlib
 face-recognition
