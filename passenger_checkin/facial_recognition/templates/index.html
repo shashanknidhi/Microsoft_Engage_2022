@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            body{
+                background-color: #f5f3ab;
+                text-align: center;
+            }
+
+            h1 {
+                color: #d61414;
+                margin-top: 15px;
+                font-size: 35px;
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+            #timedate{
+                display: grid;
+                justify-content: right;
+                margin-right: 5px;
+                font-weight: bold;
+                color: #d61414;
+            }
+            #date{
+                margin: 0px;
+            }
+            #time{
+                margin: 0px;
+            }
+            
+
+.data1
+{
+    font-size: 50px;
+    list-style-type: none;
+    margin-top: 20px;
+    margin-left: 4.5em;
+    display: flex;
+}
+
+
+.data2{
+    font-size: 50px;
+    list-style-type: none;
+    margin-top: 20px;
+    margin-left: 4.5em;
+    display: flex;
+}
+
+
+.data3 {
+    font-size: 50px;
+    list-style-type: none;
+    margin-top: 20px;
+    margin-left:4.5em;
+    display: flex;
+}
+
+.data1 p {
+    padding: 10px;
+    
+    border-radius: 15px;
+    border-color: red;
+    border-width: 10px;
+    background-color: #d61414;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.data2 p {
+    padding: 10px;
+    border-radius: 15px;
+    border-color: lightblue;
+    background-color: #d61414;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.data3 p {
+    padding: 10px;
+    border-radius: 15px;
+    border-color: lightblue;
+    background-color: #d61414;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.title :hover {
+    cursor: pointer;
+    color: red;
+    background-color: #F5F5DC;
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.center {
+    margin: 50px 0px 0px 30px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+a span {
+    padding: 8px;
+    transition: .7s;
+    position: relative;
+}
+
+a span:nth-child(1) {
+    color: #fff;
+    background: #262626;
+}
+
+a span:nth-child(2) {
+    color: #fff;
+    background: #d61414;
+}
+
+a span:nth-child(1):before {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d61414;
+    padding: 8px;
+    transition: 0.7S;
+    transform-origin: top;
+    transform: rotateX(90deg) translateY(-50%);
+}
+
+a:hover span:nth-child(1):before {
+    transform: rotateX(0deg) translateY(0%);
+}
+
+a span:nth-child(2):before {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    color: #d61414;
+    padding: 8px;
+    transition: 0.7S;
+    transform-origin: bottom;
+    transform: rotateX(90deg) translateY(50%);
+}
+
+a:hover span:nth-child(2):before {
+    transform: rotateX(0deg) translateY(0%);
+}
+
+a span:nth-child(1):after {
+    content: attr(data-attr);
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    color: #d61414;
+    transform-origin: bottom;
+    transform: rotateX(0deg) translateY(0%);
+    transition: 0.7s;
+}
+
+a:hover span:nth-child(1):after {
+    transform: rotateX(90deg) translateY(50%);
+}
+
+a span:nth-child(2):after {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d61414;
+    padding: 8px;
+    transition: 0.7S;
+    transform-origin: top;
+    transform: rotateX(0deg) translateY(0%);
+}
+
+a:hover span:nth-child(2):after {
+    transform: rotateX(90deg) translateY(-50%);
+}
+
+#p1{
+    margin-right: 2.5em;
+    font-weight: bold;
+}
+#p2{
+    margin-right: 2.5em;
+}
+#p3{
+    margin-right: 2.5em;
+}
+#p4{
+    font-weight: bold;
+    margin-right: 2.5em;
+}
+#p5{
+    font-weight: bold;
+    margin-right: auto;
+}
+#p6{
+    margin-right: 6.5em;
+}
+#p7{
+    margin-right: 6.5em;
+}
+#p8{
+    margin-right: auto;
+}
+#p9{
+    margin-right: 1.2em;
+}
+#p10{
+    margin-right: 1.2em;
+}
+#p11{
+    margin-right: auto;
+}
+
+.dropbtn {
+  background-color: white;
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  height: auto;
+  width: auto;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 8px;
+}
+.dropbtn:hover{
+    background-color: rgba(218, 24, 24, 0.726);
+    color: white;
+}
+
+.dropup {
+  position: fixed;
+  text-align: center;
+}
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  bottom: 20px;
+  z-index: 1;
+  margin-left: 10px;
+  border-radius: 4px;
+  padding: 5px;
+  width: 200px;
+}
+
+.dropup-content a {
+  color: #d61414;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 4px;
+  height: 15px;
+  padding: 2px;
+}
+
+.dropup-content a:hover {
+    color: white;
+    background-color: #d61414;
+}
+
+.dropup:hover .dropup-content {
+  display: block;
+  
+}
+
+
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h1>FACIAL REGONITION BASED PASSENGER BOARDING SYSTEM</h1>
+        </nav>
+        <div id="timedate">
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+        <div class="items">
+            
+    
+            <div class="data1">
+                <div class="title">
+                    <p id="p1">FLIGHT No. <br><br>{{ flights.flight_no }}</p>
+                </div>
+                <div class="title">
+                    <p id="p2">FROM <br><br>{{ flights.departure_loc }}</p>
+                </div>
+    
+                <div class="title">
+                    <p id="p3">TO <br><br>{{ flights.arrival_loc }}</p>
+                </div>
+    
+                
+                <div class="title">
+                    <p id="p4">TERMINAL<br><br>{{ flights.terminal }}</p>
+                </div>
+                <div class="title">
+                    <p id="p5">GATE<br><br>{{ flights.gate }}</p>
+                </div>
+    
+            </div>
+            <div class="data2">
+                <div class="title">
+                    <p id="p6">BOARDING TIME <br><br>{{ flights.boarding_time }}</p>
+                </div>
+    
+                <div class="title">
+                    <p id="p7">DEPARTURE TIME <br><br>{{ flights.dept_time }}</p>
+                </div>
+    
+                <div class="title">
+                    <p id="p8">ARRIVAL TIME <br><br>{{ flights.arrival_time }}</p>
+                </div>
+    
+            </div>
+            <div class="data3">
+                <div class="title">
+                    <p id="p9">TOTAL PASSENGERS <br><br>{{ no_of_passenger }}</p>
+                </div>
+    
+                <div class="title">
+                    <p id="p10">PASSENGERS BOARDED <br><br>{{ passenger_boarded }}</p>
+                </div>
+    
+                <div class="title">
+                    <p id="p11">PASSENGERS TO BOARDED<br><br>{{ passenger_not_boarded }}</p>
+                </div>
+    
+            </div>
+    
+            
+        </div>
+        
+        <div class="center">
+            
+            <a href="face/"><span data-attr="START">START</span><span data-attr="BOARDING"> BOARDING</span></a>
+        </div>
+        <div class="dropup">
+            <button class="dropbtn">Access Passenger and Flight Database</button>
+            <div class="dropup-content">
+              <a href="add1/">Add Passenger Details</a>
+              <a href="displaypassenger/">Display Passenger Details</a>
+              <a href="add2/">Add Flight Details</a>
+              <a href="displayflight/">Display Flight Details</a>
+            </div>
+          </div>
+          <script>
+            var today = new Date();
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            document.getElementById("date").innerHTML = "Date: " + date;
+            var today = new Date();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            document.getElementById("time").innerHTML = "Time: "+time;
+          </script>
+    </body>
+</html>

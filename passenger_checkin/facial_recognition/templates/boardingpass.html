@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- html2pdf CDN-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js">
+    </script>
+
+<style>
+    .container {
+        position: fixed;
+        top: 20%;
+        left: 20%;
+        margin-top: -65px;
+        margin-left: -100px;
+        border-radius: 7px;
+    }
+
+    
+
+    #button {
+        background-color: rgba(216, 43, 20, 0.893);
+        border-radius: 5px;
+        margin-left: 59em;
+        margin-bottom: 5px;
+        color: white;
+        border-color: white;
+    }
+    .card {
+        box-sizing: content-box;
+        width: 900px;
+        height: 350px;
+        
+        background-color: white;
+    }
+
+    
+    #title{
+        display: flex;
+        background-color: red;
+        text-align: center;
+        margin-left: 0.62em;
+        margin-right: 0.62em;
+        border-radius: 0.5em 0.5em 0em 0em;
+        padding-right: 1.3em;
+    }
+    #class1{
+        font-size: 15px;
+        color: whitesmoke;
+        padding-left: 1em;
+        padding-right: 5em;
+    }
+    #pass{
+        font-size: 15px;
+        color: whitesmoke;
+        padding-right: 5em;
+    }
+    #name{
+        font-size: 15px;
+        color: whitesmoke;
+        padding-right: 4em;
+    }
+    #class2{
+        font-size: 15px;
+        color: whitesmoke;
+        padding-left: 20px;
+    }
+    #details{
+        display: flex;
+        border-color: red;
+        border-radius: 0px 0px 5px 5px;
+        border-width: 2px;
+        border-style: solid;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    
+    
+    
+    #ld1{
+        display:flex;
+        text-align: left;
+        
+    }
+    #ld1_name{
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    
+    #ld1_name1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    
+    #ld1_name2{
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 2px;
+    }
+    
+    #ld2{
+        display:flex;
+        text-align: left;
+        
+    }
+    #ld2_from{
+        margin-left: 10px;
+        width: 210px;
+    }
+    #ld2_to{
+        width: 200px;
+    }
+    #ld2_fn{
+        width: 100px;
+    }
+    
+    #ld2_from1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #ld2_to1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #ld2_fn1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    
+    #ld2_from2{
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 2px;
+    }
+    #ld2_to2{
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 2px;
+    }
+    #ld2_fn2{
+        font-size: 20px;
+        font-weight: bolder;
+        margin-top: 2px;
+    }
+    #ld3{
+        display:flex;
+        text-align: left;
+        
+    }
+    #ld3_seat{
+        margin-left: 10px;
+        width: 210px;
+    }
+    #ld3_terminal{
+        width: 200px;
+    }
+    #ld3_gate{
+        width: 100px;
+    }
+    #ld3_seat1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #ld3_terminal1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #ld3_gate1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #ld3_seat2{
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 2px;
+    }
+    #ld3_terminal2{
+        font-size: 24px;
+        font-weight: bolder;
+        margin-top: 2px;
+    }
+    #ld3_gate2{
+        font-size: 24px;
+        font-weight: bolder;
+        margin-top: 2px;
+    }
+    #ld4{
+        display:flex;
+        text-align: left;
+        margin-left: 10px;
+    }
+    #ld4_date{
+        width: 210px;
+    }
+    #ld4_deptime{
+        width: 200px;
+    }
+    #ld4_arrivaltime{
+        width: 100px;
+    }
+    #ld4_date1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    
+    #ld4_deptime1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #ld4_arrivaltime1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #ld4_date2{
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+    #ld4_deptime2{
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+    #ld4_arrivaltime2{
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+    
+    #time_closes{
+        text-align: center;
+        color: red;
+        font-size: 12px;
+    }
+    
+    
+    #p_etkt1{
+        font-size: 8px;
+        color: gray;
+        padding-left: 10px;
+    }
+   
+    #dotted_line{
+        border-left: 2px dashed red;
+        height: 20.2em;
+        margin-left: 80px;
+    }
+    #rd1{
+        text-align: left;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    
+    #rd1_name1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #rd1_name2{
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 2px;
+    }
+    #rd2{
+        display:flex;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #rd2_from{
+        width: 150px;
+    }
+    #rd2_to{
+        width: 150px;
+    }
+    #rd2_from1{
+        font-size: 10px;
+        margin-bottom: 5px;
+        color: grey;
+        
+    }
+    #rd2_from2{
+        font-size: 15px;
+        margin-top: 5px;
+        font-weight: bolder;
+    }
+    #rd2_to1{
+        font-size: 10px;
+        margin-bottom: 5px;
+        color: grey;
+    }
+    #rd2_to2{
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+    #rd3{
+        display:flex;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #rd3_fn{
+        width: 75px;
+    }
+    #rd3_seat{
+        width: 70px;
+    }
+    
+    #rd3_fn1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #rd3_fn2{
+        font-size: 20px;
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+    #rd3_seat1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #rd3_seat2{
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+    #rd3_date1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #rd3_date2{
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+    #rd4{
+        display:flex;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #rd4_terminal{
+        width: 80px;
+    }
+    
+    
+    #rd4_terminal1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #rd4_terminal2{
+        font-size: 20px;
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+    #rd4_gate1{
+        font-size: 10px;
+        color: grey;
+        margin-bottom: 5px;
+    }
+    #rd4_gate2{
+        font-size: 20px;
+        font-weight: bolder;
+        margin-top: 5px;
+    }
+    
+    
+    #p_etkt2{
+        font-size: 8px;
+        color: gray;
+        padding-left: 15px;
+    }
+    #nextpassenger_btn{
+        background-color: rgba(216, 43, 20, 0.893);
+        border-radius: 5px;
+        margin-left: 54.4em;
+        margin-top: 1.5em;
+        border-color: white; 
+    }
+    #nextpassenger_a{
+        color: white;
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+    
+	<div class="container">
+		<button id="button">Generate PDF</button>
+		<div class="card" id="makepdf">
+			<div id = title>
+                <h1 id="class1">{{ passenger.Class }} CLASS</h1>
+                <h1 id="pass">BOARDING PASS</h1>
+                <h1 id="name">INDIAN AIRLINES</h1>
+                <h1 id="class2">{{ passenger.Class }} CLASS</h1>
+            </div>
+
+            <div id="details">
+                <div id="left_detail">
+                    <div id="ld1">
+                        <div id="ld1_name">
+                            <p id="ld1_name1">Name of Passenger</p>
+                            <p id="ld1_name2">{{ passenger.first_name }}  {{ passenger.last_name }}</p>
+                        </div>
+                    </div>
+                    
+                    <div id="ld2">
+                        <div id="ld2_from">
+                            <p id="ld2_from1">From</p>
+                            <p id="ld2_from2">{{ flights.departure_loc }}</p>
+                        </div>
+                        <div id="ld2_to">
+                            <p id="ld2_to1">To</p>
+                            <p id="ld2_to2">{{ flights.arrival_loc }}</p>
+                        </div>
+                        <div id="ld2_fn">
+                            <p id="ld2_fn1">Flight no.</p>
+                            <p id="ld2_fn2">{{ flights.flight_no }}</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="ld3">
+                        <div id="ld3_seat">
+                            <p id="ld3_seat1">Seat</p>
+                            <p id="ld3_seat2">{{ passenger.seat }}</p>
+                        </div>
+        
+                        <div id="ld3_terminal">
+                            <p id="ld3_terminal1">Terminal</p>
+                            <p id="ld3_terminal2">{{ flights.terminal }}</p>
+                        </div>
+                        
+                        <div id="ld3_gate">
+                            <p id="ld3_gate1">Gate</p>
+                            <p id="ld3_gate2">{{ flights.gate }}</p>
+                        </div>
+                        
+                        
+                    </div>
+                    <div id="ld4">
+                        <div id="ld4_date">
+                            <p id="ld4_date1">Date</p>
+                            <p id="ld4_date2">{{ flights.flight_date }}</p>
+                        </div>
+                        
+                        <div id="ld4_deptime">
+                            <p id="ld4_deptime1">Departure Time</p>
+                            <p id="ld4_deptime2">{{ flights.dept_time}}</p>
+                        </div>
+                        <div id="ld4_arrivaltime">
+                            <p id="ld4_arrivaltime1">Arrival Time</p>
+                            <p id="ld4_arrivaltime2">{{ flights.arrival_time }}</p>
+                        </div>
+                        
+                    </div>
+                    <p id="time_closes">Note: Gate closes 15 minutes before departure</p>
+                    
+                    <div id="div_etkt1">
+                        <p id="p_etkt1">ETKT : {{ passenger.e_ticket_number }}</p>
+                    </div>
+                </div>
+                <div id="dotted_line"></div>
+                <div id="right_detail">
+                    <div id="rd1">
+                        <p id="rd1_name1">Name of Passenger</p>
+                        <p id="rd1_name2">{{ passenger.first_name }}  {{ passenger.last_name }}</p>
+                    </div>
+                    <div id="rd2">
+                        <div id="rd2_from">
+                            <p id="rd2_from1">From</p>
+                            <p id="rd2_from2">{{ flights.departure_loc }}</p>
+                        </div>
+                        <div id="rd2_to">
+                            <p id="rd2_to1">To</p>
+                            <p id="rd2_to2">{{ flights.arrival_loc }}</p>
+                        </div>
+                    </div>
+                    <div id="rd3">
+                        <div id="rd3_fn">
+                            <p id="rd3_fn1">Flight No.</p>
+                            <p id="rd3_fn2">{{ flights.flight_no }}</p>
+                        </div>
+                        <div id="rd3_seat">
+                            <p id="rd3_seat1">Seat</p>
+                            <p id="rd3_seat2">{{ passenger.seat }}</p>
+                        </div>
+                        <div id="rd3_date">
+                            <p id="rd3_date1">Date</p>
+                            <p id="rd3_date2">{{ flights.flight_date }}</p>
+                        </div>
+                    </div>
+                    <div id="rd4">
+                        <div id="rd4_terminal">
+                            <p id="rd4_terminal1">Terminal</p>
+                            <p id="rd4_terminal2">{{ flights.terminal }}</p>
+                        </div>
+                        <div id="rd4_gate">
+                            <p id="rd4_gate1">Gate</p>
+                            <p id="rd4_gate2">{{ flights.gate }}</p>
+                        </div>
+                        
+                    </div>
+                    <div id="div_etkt2">
+                        <p id="p_etkt2">ETKT : {{ passenger.e_ticket_number }}</p>
+                    </div>
+                </div>
+            </div>
+		</div>
+        <button id="nextpassenger_btn"><a href="nextp/" id="nextpassenger_a">Next passenger Boarding</a></button>
+	</div>
+    
+	<script>
+		var button = document.getElementById("button");
+		var makepdf = document.getElementById("makepdf");
+        var opt = {
+        margin:       1,
+        filename:     'boardingpass.pdf',
+        jsPDF:        { format: 'letter', orientation: 'landscape' }
+};
+		button.addEventListener("click", function () {
+			html2pdf().set(opt).from(makepdf).save();
+		});
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+
+</table>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            h1{
+                margin-top: 80px;
+                text-align: center;
+                color: rgba(208, 41, 41, 0.829)
+            }
+            table{
+                
+                border: solid rgba(208, 41, 41, 0.829);
+                border-collapse: collapse;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1050px;
+            }
+            th{
+                border: solid rgba(208, 41, 41, 0.829);
+                border-collapse: collapse;
+                font-size: 20px;
+            }
+            td{
+                border: solid rgba(208, 41, 41, 0.829);
+                border-collapse: collapse;
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Passenger Details</h1>
+        <table>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Seat</th>
+            <th>E-Ticket Number</th>
+            <th>PNR</th>
+            <th>Class</th>
+            <th>Flight No.</th>
+            <th>Boarding Done</th>
+            {% for x in passengers %}
+            <tr>
+                <td>{{ x.first_name }}</td>
+                <td>{{ x.last_name }}</td>
+                <td>{{ x.seat }}</td>
+                <td>{{ x.e_ticket_number }}</td>
+                <td>{{ x.pnr }}</td>
+                <td>{{ x.Class }}</td>
+                <td>{{ x.flight_no }}</td>
+                {% if x.facedetected %}
+                <td>Yes</td>
+                {% else %}
+                <td>No</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+    </body>
+</html>

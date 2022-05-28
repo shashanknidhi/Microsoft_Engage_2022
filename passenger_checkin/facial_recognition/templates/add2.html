@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            text-align: center;
+            margin-left: 25em;
+            height: 37em;
+            width: 30em;
+            border-radius: 8px;
+            margin-top:1em;
+            }
+
+
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+
+            .container {
+            padding: 2px 16px;
+            }
+            h1{
+                color: rgba(208, 41, 41, 0.829);
+
+            }
+
+            .input{
+                margin-top: 3px;
+                margin-bottom: 5px;
+                border-radius: 5px;
+                border-color: rgba(208, 41, 41, 0.829);
+                
+            }
+            #submit{
+                margin-top: 20px;
+                background-color: rgba(208, 41, 41, 0.829);
+                border: none;
+                border-radius: 10px;
+                height: 25px;
+                width: 100px;
+                color: white;
+            }
+            
+            #date,#time1,#time2,#time3{
+                width: 120px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1>Add Flight Details</h1>
+        <form action="addflight/" method="post">
+            {% csrf_token %}
+            <br>
+            <input type="text" name="flight_no" class="input" placeholder="Flight No." required>
+            <br>
+            <br>
+            <input type="text" name="departure_loc" class="input" placeholder="Departure Location" required>
+            <br><br>
+            <input type="text" name="arrival_loc" class="input" placeholder="Arrival Location" required>
+            <br>
+            Flight Date: <br>
+            <input type="date" name="flight_date" class="input" id="date" required>
+            <br>
+            Boarding Time : <br>
+            <input type="time" name="boarding_time" min="00:00" max="23:59" class="input" id="time1" required>
+            <br>
+            Departure Time: <br>
+            <input type="time" name="dept_time" min="00:00" max="23:59" class="input" id="time2" required>
+            <br>
+            Arrival Time: <br>
+            <input type="time" name="arrival_time" min="00:00" max="23:59" class="input" id="time3" required>
+            <br>
+            <br>
+            <input type="text" name="terminal" class="input" placeholder="Terminal" required>
+            <br>
+            <br>
+            <input type="text" name="gate" class="input" placeholder="Gate" required>
+            <br>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+            </div>
+        </div>
+        
+    </body>
+</html>

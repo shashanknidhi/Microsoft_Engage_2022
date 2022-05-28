@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            text-align: center;
+            margin-left: 25em;
+            height: 30em;
+            width: 30em;
+            border-radius: 8px;
+            margin-top:4em;
+            }
+
+
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+
+            .container {
+            padding: 2px 16px;
+            }
+            h1{
+                color: rgba(208, 41, 41, 0.829);
+
+            }
+
+            .input{
+                margin-top: 3px;
+                margin-bottom: 5px;
+                border-radius: 5px;
+                border-color: rgba(208, 41, 41, 0.829);
+            }
+            #submit{
+                margin-top: 20px;
+                background-color: rgba(208, 41, 41, 0.829);
+                border: none;
+                border-radius: 10px;
+                height: 25px;
+                width: 100px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1>Add Passenger Details</h1>
+        <form action="addpassenger/" method="post">
+            {% csrf_token %}
+            <br>
+            <input type="text" name="first" class="input" placeholder="First Name" required>
+            <br>
+            <br>
+            <input type="text" name="last" class="input" placeholder="Last Name" required>
+            <br>
+            <br>
+            <input type="text" name="seat" class="input" placeholder="Seat" required>
+            <br>
+            <br>
+            <input type="text" name="etkt" class="input" placeholder="E-Ticket No." required>
+            <br>
+            <br>
+            <input type="text" name="pnr" class="input" placeholder="PNR" required>
+            <br>
+            <br>
+            <input type="text" name="Class" class="input" placeholder="Class" required>
+            <br>
+            <br>
+            <input type="text" name="fltno" class="input" placeholder="Flight No." required>
+            <br>
+            <input type="submit" value="Submit Details" id="submit">
+        </form>
+            </div>
+        </div>
+        
+    </body>
+</html>

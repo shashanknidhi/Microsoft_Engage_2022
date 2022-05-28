@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facial Recognition based Passenger Boarding System</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body{
+                background-color: rgba(177, 28, 28, 0.594);
+            }
+            img{
+                border-radius: 8px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+            
+            p{
+                text-align: right;
+                padding-right: 325px;
+            }
+            #current{
+                border: none;
+                background-color: red;
+                border-radius: 5px;
+                height: 20px;
+                width: 40px;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            a:hover{
+                background-color: white;
+                color: red;
+            }
+            #current:hover{
+                background-color: white;
+            }
+        </style>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+        $(document).ready(function() {
+          $('#current').hide().delay(10000).fadeIn(1000);
+        });
+        </script>
+    </head>
+    <body>
+        
+        <p><button id="current"><a href="current_passenger/">Next</a></button></p>
+        <img src="{% url 'facecam_feed' %}" alt="Camerafeed" >
+        
+        
+    </body>
+</html>

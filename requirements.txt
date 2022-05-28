@@ -1,0 +1,5 @@
+django
+imutils
+opencv-python
+dlib
+face-recognition

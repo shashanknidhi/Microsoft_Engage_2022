@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            h1{
+                margin-top: 80px;
+                text-align: center;
+                color: rgba(208, 41, 41, 0.829)
+            }
+            table{
+                
+                border: solid rgba(208, 41, 41, 0.829);
+                border-collapse: collapse;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            th{
+                border: solid rgba(208, 41, 41, 0.829);
+                border-collapse: collapse;
+            }
+            td{
+                border: solid rgba(208, 41, 41, 0.829);
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flight Details</h1>
+        <table>
+            <th>Flight No.</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Flight Date</th>
+            <th>Boarding Time</th>
+            <th>Deptarture Time</th>
+            <th>Arrival Time</th>
+            <th>Terminal</th>
+            <th>Gate</th>
+            
+            {% for x in flights %}
+            <tr>
+                <td>{{ x.flight_no }}</td>
+                <td>{{ x.departure_loc }}</td>
+                <td>{{ x.arrival_loc }}</td>
+                <td>{{ x.flight_date }}</td>
+                <td>{{ x.boarding_time }}</td>
+                <td>{{ x.dept_time }}</td>
+                <td>{{ x.arrival_time }}</td>
+                <td>{{ x.terminal }}</td>
+                <td>{{ x.gate }}</td>
+                
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
