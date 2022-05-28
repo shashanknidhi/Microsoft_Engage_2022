@@ -28,7 +28,18 @@ For frontend design part of the webapp, HTML5,CSS3 and JS are used.
     ```
     git clone https://github.com/shashanknidhi/Microsoft_Engage_2022.git
     ```
-2. Set up  Python Virtual Environment:
+    
+2. Complete pre-requisites  for downloading face_recognition library of python:
+    - Download Microsoft Visual Studio 2019 with C/C++ compiler installed.
+    - Of course, python3 should be there.
+    - Download [Cmake](https://cmake.org/download/) and it to your system environment variables.
+    - Download Dlib and face_recognition using the command below or else you can do this in the later step:
+      ```
+      pip install dlib
+      pip install face-recognition
+      ```
+      In case of any issue, consult this page : https://github.com/ageitgey/face_recognition/issues/175#issue-257710508
+3. Set up  Python Virtual Environment:
    - Go to root directory of the project.
    ```
    cd Microsoft_Engage_2022
@@ -45,16 +56,7 @@ For frontend design part of the webapp, HTML5,CSS3 and JS are used.
     ```
     (project) C:/.....
     ```
- 3.	Complete pre-requisites  for downloading face_recognition library of python:
-    - Download Microsoft Visual Studio 2019 with C/C++ compiler installed.
-    - Of course, python3 should be there.
-    - Download [Cmake](https://cmake.org/download/) and it to your system environment variables.
-    - Download Dlib and face_recognition using the command below or else you can do this in the next step:
-      ```
-      pip install dlib
-      pip install face-recognition
-      ```
-      In case of any issue, consult this page : https://github.com/ageitgey/face_recognition/issues/175#issue-257710508
+
 4. Install requirements :
     ```
     pip install -r requirements.txt
